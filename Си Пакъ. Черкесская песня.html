@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Си Пакъ. Черкесская песня</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/office/512/globe.png" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="https://img.icons8.com/emoji/512/partying-face.png" type="image/x-icon"> -->
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        .page {
+            padding: 2.5rem .5rem 1.25rem;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .iframe-wrapper {
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding-top: 56.25%;
+            background-color: #eee;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            margin: 0 auto 1.25rem;
+        }
+
+        @media screen and (min-width: 1140px) {
+
+            .page {
+                max-width: 1140px;
+                margin: 0;
+            }
+
+            .videos {
+                display: grid;
+                grid-gap: .5rem;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .iframe-wrapper {
+                margin: 0;
+            }
+
+            body {
+                padding-bottom: 0;
+            }
+
+            h1 {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+
+        <h1>
+            Happy new year
+        </h1>
+
+        <div class="videos">
+            <div class="iframe-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/efh2PIDFMRc"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="iframe-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XZIZIQby1VY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="iframe-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RbeYj6-9wKI"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="iframe-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/g0l7nwOV1fk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const favicons = [
+            'https://img.icons8.com/office/512/globe.png',
+            'https://img.icons8.com/emoji/512/partying-face.png',
+            'https://img.icons8.com/emoji/512/party-popper.png',
+            'https://img.icons8.com/fluency/512/bumblebee.png',
+            'https://img.icons8.com/fluency/512/bug.png',
+            'https://img.icons8.com/fluency/512/unicorn.png',
+        ]
+
+        const faviconLinkElement = document.querySelector('link[rel="shortcut icon"]')
+        let currentIconIndex = 0;
+        setInterval(() => {
+            currentIconIndex += 1;
+            if (currentIconIndex === favicons.length) {
+                currentIconIndex = 0
+            }
+            faviconLinkElement.href = favicons[currentIconIndex]
+        }, 1500)
+    </script>
+</body>
+
+</html>
